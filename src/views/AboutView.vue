@@ -10,6 +10,11 @@
 <script>
 export default {
   name: 'AboutView',
+  data() {
+    return {
+      angka: 0
+    }
+  },
   methods: {
     redirectTo(path) {
       this.$router.replace(path)
