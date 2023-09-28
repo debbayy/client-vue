@@ -4,6 +4,7 @@ import createPersitedState from "vuex-persistedstate"
 
 import user from './user'
 import home from './home'
+import pokemon from './pokemon'
 
 Vue.use(Vuex)
 
@@ -14,6 +15,10 @@ const persitedDataState = createPersitedState({
 export default new Vuex.Store({
   plugins: [persitedDataState],
   modules: {
+    pokemon: {
+      namespaced: true,
+      ...pokemon
+    },
     user: {
       namespaced: true,
       ...user
@@ -21,6 +26,6 @@ export default new Vuex.Store({
     home: {
       namespaced: true,
       ...home
-    },
+    }
   }
 })
